@@ -1,16 +1,19 @@
-import Counter from './components/Counter';
+import { Box, type SxProps, type Theme } from '@mui/material';
+import Counter from './components/Counter/Counter';
+
+const appContainerStyles: SxProps<Theme> = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '2rem',
+};
 
 function App() {
   return (
-    <div style={{ 
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '2rem'
-    }}>
+    <Box sx={appContainerStyles}>
       <Counter />
-    </div>
-  )
+    </Box>
+  );
 }
 
 export default App;

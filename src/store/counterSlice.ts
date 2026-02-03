@@ -1,11 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import type { CounterState } from './types';
 
-interface CounterState {
-  count: number;
-  isDisabled: boolean;
-}
-
-const initialState: CounterState = {
+export const initialState: CounterState = {
   count: 0,
   isDisabled: false,
 };
@@ -15,7 +11,6 @@ const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      // 邏輯保護
       if (!state.isDisabled) {
         state.count += 1;
       }
