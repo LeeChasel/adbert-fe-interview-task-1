@@ -2,7 +2,14 @@ import Counter from './components/Counter';
 
 function App() {
   return (
-    <Counter />
+    <div style={{ 
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: '2rem'
+    }}>
+      <Counter />
+    </div>
   )
 }
 
